@@ -1,0 +1,470 @@
+/* general */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+
+/* first page */
+
+.first.page {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 50px;
+
+    background: #fffaf0;
+}
+
+.first.page h1 {
+    font-size: 70px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.sun-moon {
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+
+.intro {
+    max-width: 650px;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 50px;
+}
+
+
+/* day and night choices */
+.choices {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.side-card {
+    width: 280px;
+    min-height: 220px;
+    padding: 35px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.side-card span {
+    font-size: 45px;
+}
+
+.side-card h2 {
+    font-size: 20px;
+    margin: 15px 0 8px;
+}
+
+.side-card p {
+    font-size: 18px;
+}
+
+
+/* Day card */
+.day-card {
+    background: #f9d976;
+}
+
+
+/* Night card */
+.night-card {
+    background: #202b4a;
+    color: white;
+}
+
+
+/* Hover effect */
+.side-card:hover {
+    transform: translateY(-10px);
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* day section */
+.day-section {
+    height: 100vh;
+    padding: 40px 8%;
+    background: #f9d976;
+    text-align: center;
+}
+
+.section-label {
+    font-size: 18px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.day-section h2 {
+    font-size: 65px;
+    margin: 20px 0;
+}
+
+.day-intro {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* bubble container */
+
+.bubble-container {
+    position: relative;
+    width: 900px;
+    max-width: 100%;
+    height: 380px;
+    margin: 30px auto 0;
+}
+
+
+/* bubbles */
+
+.bubble {
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
+
+    transition: all 0.4s ease;
+
+    animation: floating 4s ease-in-out infinite;
+}
+
+
+/* emoji */
+.bubble span {
+    font-size: 35px;
+}
+
+/* bubble title */
+.bubble h3 {
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+/* hidden description */
+.bubble p {
+    display: none;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 8px;
+}
+
+/* bubble hover */
+.bubble:hover {
+    width: 230px;
+    height: 230px;
+
+    z-index: 10;
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.2);
+
+    animation-play-state: paused;
+}
+
+.bubble:hover span {
+    font-size: 40px;
+}
+
+.bubble:hover h3 {
+    font-size: 19px;
+}
+
+.bubble:hover p {
+    display: block;
+}
+
+/* bubble position */
+.bubble-1 {
+    top: 20px;
+    left: 80px;
+}
+
+.bubble-2 {
+    top: 20px;
+    left: 360px;
+}
+
+.bubble-3 {
+    top: 20px;
+    right: 80px;
+}
+
+.bubble-4 {
+    bottom: 30px;
+    left: 150px;
+}
+
+.bubble-5 {
+    bottom: 40px;
+    right: 300px;
+}
+
+.bubble-6 {
+    bottom: 20px;
+    right: 60px;
+}
+
+/* floating animation */
+@keyframes floating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* night section */
+
+.night-section {
+    height: 100vh;
+
+    padding: 40px 8%;
+
+    background: #202b4a;
+
+    color: white;
+
+    text-align: center;
+}
+
+.night-section h2 {
+    font-size: 65px;
+
+    margin: 20px 0;
+}
+
+.night-intro {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* night bubble container */
+
+.night-bubbles-container {
+    position: relative;
+
+    width: 900px;
+
+    max-width: 100%;
+
+    height: 380px;
+
+    margin: 30px auto 0;
+}
+
+
+/* night bubbles */
+
+.night-bubble {
+    position: absolute;
+
+    width: 160px;
+
+    height: 160px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #222;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
+
+    transition: all 0.4s ease;
+
+    animation: night-floating 4s ease-in-out infinite;
+}
+
+
+/* emoji */
+
+.night-bubble span {
+    font-size: 35px;
+}
+
+
+/* bubble title */
+
+.night-bubble h3 {
+    font-size: 16px;
+
+    margin-top: 8px;
+}
+
+
+/* hidden description */
+
+.night-bubble p {
+    display: none;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    margin-top: 8px;
+}
+
+
+/* bubble hover */
+
+.night-bubble:hover {
+    width: 230px;
+
+    height: 230px;
+
+    z-index: 10;
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.2);
+
+    animation-play-state: paused;
+}
+
+.night-bubble:hover span {
+    font-size: 40px;
+}
+
+.night-bubble:hover h3 {
+    font-size: 19px;
+}
+
+.night-bubble:hover p {
+    display: block;
+}
+
+
+/* bubble position */
+
+.night-bubble1 {
+    top: 20px;
+
+    left: 80px;
+}
+
+.night-bubble2 {
+    top: 20px;
+
+    left: 360px;
+}
+
+.night-bubble3 {
+    top: 20px;
+
+    right: 80px;
+}
+
+.night-bubble4 {
+    bottom: 30px;
+
+    left: 150px;
+}
+
+.night-bubble5 {
+    bottom: 40px;
+
+    right: 300px;
+}
+
+.night-bubble6 {
+    bottom: 20px;
+
+    right: 60px;
+}
+
+
+/* floating animation */
+
+@keyframes night-floating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
